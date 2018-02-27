@@ -21,11 +21,7 @@ class Game
       puts "#{@current_player}: Yes! You are correct"
     else
       puts "#{@current_player}: Seriously? No"
-      if @current_player == 'Player1'
-        @player2.lives -= 1
-      elsif @current_player == 'Player2'
-        @player1.lives -= 1
-      end
+       @current_player == 'Player1' ? @player2.lives -= 1 : @player1.lives -= 1
     end
     puts "P1: #{@player1.lives} / 3 vs P2 : #{@player2.lives} /3"
   end
